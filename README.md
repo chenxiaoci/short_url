@@ -14,3 +14,5 @@ curl -X POST "http://wkt.ooo/api/short" -H "Content-Type: application/json" --da
 ```
 {"url":"http://wkt.ooo/f8B6Y"}
 ```
+
+#### 将增加免费二级域名分发系统api
