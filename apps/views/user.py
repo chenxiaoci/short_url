@@ -9,7 +9,6 @@ class UserResource(BaseResource):
     post: 注册
     get: 
     put: 
-
     """
     def post(self):
         form = UserForm().validate_for_api()
