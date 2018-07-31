@@ -7,10 +7,9 @@ urlbp = Blueprint('uri', __name__)
 
 @urlbp.route('/api/short', methods=['POST'])
 def api():
-    if request.method == 'POST':
-        form = UrlForm().validate_for_api()
-        url = Url.save_url(form.long_url.data)
-        return jsonify({'url': url.short_url}), 200
+    form = UrlForm().validate_for_api()
+    url = Url.save_url(form.long_url.data)
+    return jsonify({'url': url.short_url}), 200
 
 
 @urlbp.route('/<code>')
