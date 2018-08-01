@@ -14,6 +14,6 @@ class BaseForm(Form):
         valid = super(BaseForm, self).validate()
         if not valid:
             # 这里如果出错将直接跑出异常, 视图中将免除了判断并使用ifelse的麻烦
-            raise ApiException()
+            raise ApiException(msg=self.errors)
         return self
 
